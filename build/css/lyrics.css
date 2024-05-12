@@ -1,0 +1,74 @@
+/* FONTS */
+@font-face {
+    font-family: 'DIN';
+    src: url('../font/DIN/DIN.ttf');
+}
+
+/* RESET */
+* {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+/* VARIABLES */
+:root {
+    --LIGHT-COLOR: antiquewhite;
+    --DARK-COLOR: darkslategray;
+    --TRANSPARENT-DARK-COLOR: hsla(180, 25%, 25%, 0.125);
+    --TAB-COLOR: crimson;
+    --LIGHT-FONT-COLOR: azure;
+}
+
+/* STYLING */
+body {
+    color: darkslategray;
+    font-family: DIN, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.content {
+    background-image: linear-gradient(to top, var(--LIGHT-COLOR), var(--TRANSPARENT-DARK-COLOR));
+    height: 100vh;
+    overflow-y: auto;
+    padding: 2vh;
+    width: 100%;
+}
+
+header {
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1rem;
+}
+
+.title-selection {
+    background-color: var(--TAB-COLOR);
+    border-radius: 0.5rem 0.5rem 0 0;
+    border: 1px solid var(--LIGHT-COLOR);
+    box-shadow: inset 0 -1px 4px black;
+    color: var(--LIGHT-FONT-COLOR);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.25rem;
+    text-align: center;
+}
+
+.title-selection:active {
+    filter: brightness(90%);
+}
+
+#song-title {
+    margin-bottom: 0.5rem;
+}
+
+#song-lyrics {
+    margin-bottom: 3rem;
+}
+
+iframe {
+    height: 50vw;
+    width: 100%;
+}
